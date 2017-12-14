@@ -7,6 +7,7 @@ require_relative 'king'
 require_relative 'pawn'
 require_relative 'bishop'
 
+
 class Board
 
   attr_accessor :grid
@@ -29,9 +30,8 @@ class Board
 
 
   def move_piece(from_pos, to_pos)
-    self[to_pos] = self[from_pos]
-    self[from_pos] = NullPiece.instance
-    self[to_pos].pos = to_pos
+    self[to_pos], self[from_pos] = self[from_pos], self[to_pos]
+    self[to_pos].pos = to_pos if !self[to_pos].is_a?(NullPiece)
   end
 
   def move_piece!(from_pos, to_pos)

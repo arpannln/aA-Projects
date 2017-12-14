@@ -3,6 +3,7 @@ require 'colorize'
 require_relative 'cursor'
 require 'byebug'
 class Display
+attr_reader :cursor
 
 def initialize(board)
   @board = board

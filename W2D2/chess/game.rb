@@ -3,7 +3,7 @@ require_relative 'display'
 
 class Game
 
-  attr_accessor :board, :current_player
+  attr_accessor :board, :current_player, :from, :to
 
   def initialize(player1, player2)
     @board = Board.new()
@@ -23,15 +23,11 @@ class Game
 
   def render_loop
     system("clear")
-
-    puts "-----------------------------"
-    puts "hi"
-    from = gets.chomp
-    system("clear")
     @display.render
-    puts "hi"
-    to = gets.chomp
-    @board.move_piece(from, to)
+    puts "-----------------------------"
+    # from = @display.cursor.get_input 
+    # to = @display.cursor.get_input 
+    # @board.move_piece(from, to)
     system("clear")
     @display.render
   end
@@ -72,9 +68,5 @@ if __FILE__ == $0
   # game.play
   # p game.board[[4,4]].moves
 
-
-  game.board.move_piece([0,4], [4,4])
-  p game.board[[4,4]].valid_moves
-  game.board.move_piece([6,4], [4,4])
   game.play
 end
