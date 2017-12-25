@@ -43,15 +43,16 @@ class Company < ApplicationRecord
   class_name: 'WatchListItem'
   
   has_many :watch_lists, 
-  through: :watch_list_items, 
+  through: :watch_lists_items, 
   source: :watch_list
   
   has_one :board, 
   primary_key: :id, 
   foreign_key: :company_id,
-  class_name: 'Company'
+  class_name: 'Board'
   
-  
-  
+  has_many :watchers, 
+  through: :watch_lists, 
+  source: :user
   
 end
