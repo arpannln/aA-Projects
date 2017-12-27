@@ -1,0 +1,2 @@
+class HouseMembership < ApplicationRecord
+end

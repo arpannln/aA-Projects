@@ -1,0 +1,2 @@
+class WizardingSchool < ApplicationRecord
+end
