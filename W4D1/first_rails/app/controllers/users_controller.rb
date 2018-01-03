@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   def index 
-    @users = User.all 
-    if !@users.empty?
-      render json: @users, status: 200
+    if params[:query]
+      @users = User.where('username LIKE ?', "%#{params[:query]}%")
     else 
-      render plain: "No users yet!"
+      @users = User.all 
     end 
+    
+    render json: @users 
   end 
   
   def create 
