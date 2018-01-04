@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user 
       render json: @user, status: 200
     else 
-      render plain: "Could not find user!", status: 404
+      render plain: 'Could not find user!', status: 404
     end 
   end 
   
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       @user.update(user_params)
       redirect_to user_url(@user)
     else 
-      render plain: "Could not find user!", status: 404
+      render plain: 'Could not find user!', status: 404
     end 
   end 
   
