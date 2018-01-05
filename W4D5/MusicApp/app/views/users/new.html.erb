@@ -1,0 +1,15 @@
+<h1>Currently:</h1>
+<% if current_user %>
+<%= current_user.email %>
+  <% else %>
+<%= p "No one signed in yet!" %>
+  <% end %>
+  
+<h1>Sign Up!</h1>
+<form class="" action= "<%=user_url(current_user.id)" %> method="post">
+    <h1>Email</h1>
+    <input type="text" name="user[email]" value="">
+    
+    <h1>Password</h1>
+    <input type="text" name="user[password]" value="">
+</form>
