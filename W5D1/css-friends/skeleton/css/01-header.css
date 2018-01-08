@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #eee;
+}
+
+.header {
+  background: #8B0000;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.header a {
+  display :block;
+  padding: 10px 20px;
+  
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  border-left: 1px solid #000; 
+  border-right: 1px solid #000;
+}
+
+.header-logo {
+  border-right: 1px solid #000; 
+  border-left: 1px solid #000;
+  font-weight: 700;
+}
+.header-logo:hover {
+  background: #000;
+}
+
+.header-list >li:hover {
+  background: #000;
+}
+
+.header-list {
+  display: flex;
+  border-left: 1px solid #000;
+}
+
+.header-list > li {
+  border-right: 1px solid #000;
+  text-decoration: none;
+}
