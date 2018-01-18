@@ -1,0 +1,57 @@
+[class*="icon-"] {
+  display: inline-block;
+  background-image: url(".././images/sprite.png");
+  background-size: 20px 200px;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 0;
+  width: 20px;
+  padding-top: 20px;
+}
+
+[class*="icon-small-"] {
+  width: 20px;
+  padding-top: 20px;
+}
+
+.icon-comment {
+  background-position: 0 0;
+}
+
+.icon-comment:hover {
+  background-color: lightgray;
+  background-position: 0 -20px;
+}
+
+.icon-reblog {
+  background-position: 0 -100px;
+}
+
+.icon-reblog:hover {
+  background-position: 0 -125px;
+}
+
+.icon-favorite {
+  background-position: 0 -50px;
+}
+
+.icon-favorite:hover {
+  background-position: 0 -75px;
+}
+
+.icon-small-wall {
+  background-position: 0 -200px;
+}
+
+.icon-small-about {
+  background-position: 0 -175px;
+}
+
+.icon-small-friends {
+  background-color: green;
+  background-position: 0 -200px;
+}
+
+.icon-small-photos {
+  background-position: 0 -200px;
+}

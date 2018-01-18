@@ -1,0 +1,21 @@
+<form class="simple-form tweet-compose" data-tweets-ul="<%= tweets_ul %>">
+  <label for='tweet-textarea'>Enter Tweet</label>
+  <textarea id='tweet-textarea' 
+    name="tweet[content]" placeholder="What's on your mind?"></textarea>
+  <strong class="chars-left"></strong>
+
+  <script type='text/javascript'>
+    window.users = <%= render("users/users.json.jbuilder", users: User.all).html_safe %>; 
+  </script>
+
+  <ul class="mentioned-users"></ul>
+
+  <ul class='tweet-actions'>
+    <li>
+      <button class="add-mentioned-user">Add mention</button>
+    </li>
+    <li>
+      <input type="submit" value="Tweet">
+    </li>
+  </ul>
+</form>
